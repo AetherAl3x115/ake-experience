@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { FileText, BookOpen, Video, GraduationCap, Package, ScrollText } from "lucide-react";
+import {
+  FileText,
+  BookOpen,
+  Video,
+  GraduationCap,
+  Package,
+  ScrollText,
+} from "lucide-react";
 import { SCATTERED_SOURCES } from "../../data/content";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -53,7 +60,7 @@ export function Problem() {
               >
                 <Icon size={22} strokeWidth={1.5} />
               </motion.div>
-              <span className="font-mono text-[10px] tracking-wide text-ink-dim uppercase">
+              <span className="font-mono text-[12px] tracking-wide text-ink-dim uppercase">
                 {source.label}
               </span>
             </motion.div>
@@ -62,7 +69,8 @@ export function Problem() {
       </div>
 
       <p className="mt-16 max-w-lg text-center text-ink-faint font-mono text-sm tracking-wide">
-        Sin gobierno del conocimiento, cada nuevo sistema repite el mismo trabajo.
+        Sin gobierno del conocimiento, cada nuevo sistema repite el mismo
+        trabajo.
       </p>
     </section>
   );

@@ -53,7 +53,7 @@ export function FutureVision() {
                 transition={{ duration: 0.5, delay: i * 0.1 + 0.3 }}
               >
                 <div className="w-3 h-3 rounded-full bg-indigo shadow-[0_0_10px_rgba(91,124,250,0.6)]" />
-                <span className="font-mono text-[10px] text-ink-dim whitespace-nowrap uppercase tracking-wide">
+                <span className="font-mono text-[12px] text-ink-dim whitespace-nowrap uppercase tracking-wide">
                   {node.label}
                 </span>
               </motion.div>

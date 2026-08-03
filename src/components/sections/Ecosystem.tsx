@@ -22,7 +22,9 @@ function findNode(id: string) {
 export function Ecosystem() {
   const [active, setActive] = useState<string | null>(null);
   const activeInfo = active ? CONSUMER_INFO.find((c) => c.id === active) : null;
-  const consumerEdges = ECOSYSTEM_EDGES.filter(([from]) => from === "orchestrator");
+  const consumerEdges = ECOSYSTEM_EDGES.filter(
+    ([from]) => from === "orchestrator",
+  );
 
   return (
     <section
@@ -86,8 +88,15 @@ export function Ecosystem() {
                       r={4}
                       fill="#ecca8e"
                       initial={{ offsetDistance: "0%", opacity: 0 }}
-                      animate={{ offsetDistance: "100%", opacity: [0, 1, 1, 0] }}
-                      transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                      animate={{
+                        offsetDistance: "100%",
+                        opacity: [0, 1, 1, 0],
+                      }}
+                      transition={{
+                        duration: 1.4,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
                       style={{
                         offsetPath: `path("M ${a.x} ${a.y} L ${b.x} ${b.y}")`,
                       }}
@@ -102,7 +111,11 @@ export function Ecosystem() {
               const isActive = active === node.id;
               const isDimmed = isConsumer && active !== null && !isActive;
               const radius =
-                node.kind === "orchestrator" ? 22 : node.kind === "core" ? 13 : 11;
+                node.kind === "orchestrator"
+                  ? 22
+                  : node.kind === "core"
+                    ? 13
+                    : 11;
 
               return (
                 <motion.g
@@ -146,7 +159,7 @@ export function Ecosystem() {
                     y={node.y + radius + 18}
                     textAnchor="middle"
                     fontFamily="IBM Plex Mono, monospace"
-                    fontSize={11}
+                    fontSize={13}
                     fill={isActive ? "#ecca8e" : "rgba(244,241,232,0.6)"}
                     letterSpacing={0.4}
                     animate={{ opacity: isDimmed ? 0.3 : 1 }}
@@ -158,7 +171,7 @@ export function Ecosystem() {
               );
             })}
           </svg>
-          <p className="mt-2 text-center lg:text-left font-mono text-[11px] text-ink-faint tracking-wide">
+          <p className="mt-2 text-center lg:text-left font-mono text-[12px] text-ink-faint tracking-wide">
             Pasa el cursor (o toca) cada consumidor para ver su detalle →
           </p>
         </div>
@@ -187,13 +200,17 @@ export function Ecosystem() {
                     <span className="font-mono text-[10px] text-ink-faint uppercase tracking-wide">
                       Consume
                     </span>
-                    <p className="text-sm text-ink-dim mt-1">{activeInfo.consumes}</p>
+                    <p className="text-sm text-ink-dim mt-1">
+                      {activeInfo.consumes}
+                    </p>
                   </div>
                   <div>
                     <span className="font-mono text-[10px] text-ink-faint uppercase tracking-wide">
                       Produce
                     </span>
-                    <p className="text-sm text-ink-dim mt-1">{activeInfo.produces}</p>
+                    <p className="text-sm text-ink-dim mt-1">
+                      {activeInfo.produces}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -210,8 +227,8 @@ export function Ecosystem() {
                 </span>
                 <p className="text-sm text-ink-dim mt-3 leading-relaxed">
                   Selecciona un nodo del diagrama — Chatbot, Learning Studio,
-                  Learning Bridge, Cursos, Exámenes o Simuladores — para ver
-                  qué recibe del motor y qué entrega de vuelta al ecosistema.
+                  Learning Bridge, Cursos, Exámenes o Simuladores — para ver qué
+                  recibe del motor y qué entrega de vuelta al ecosistema.
                 </p>
               </motion.div>
             )}
