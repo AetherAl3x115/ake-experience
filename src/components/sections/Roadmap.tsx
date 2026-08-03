@@ -11,7 +11,7 @@ export function Roadmap() {
       <SectionHeading
         eyebrow="Roadmap"
         align="center"
-        title="Diez fases, una sola infraestructura"
+        title="Diez posibilidades, una sola infraestructura"
         description="El roadmap no entrega funcionalidades sueltas: construye, fase por fase, una plataforma de conocimiento institucional."
       />
 
@@ -79,7 +79,9 @@ function RoadmapCard({
     >
       <span className="font-mono text-xs text-gold">{phase.number}</span>
       <h4 className="font-display text-lg text-ink mt-1">{phase.title}</h4>
-      <p className="text-sm text-ink-dim mt-1.5 leading-relaxed">{phase.description}</p>
+      <p className="text-sm text-ink-dim mt-1.5 leading-relaxed">
+        {phase.description}
+      </p>
     </motion.div>
   );
 }
