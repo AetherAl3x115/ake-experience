@@ -38,7 +38,9 @@ export function LearningBridge() {
                 {step.label}
               </p>
               {step.detail && (
-                <p className="text-xs text-ink-faint mt-1 font-mono">{step.detail}</p>
+                <p className="text-xs text-ink-faint mt-1 font-mono">
+                  {step.detail}
+                </p>
               )}
             </motion.div>
 

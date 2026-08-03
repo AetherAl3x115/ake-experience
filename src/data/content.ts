@@ -85,7 +85,7 @@ export const LEARNING_STUDIO_FEATURES = [
 ];
 
 export const BRIDGE_FLOW: FlowStep[] = [
-  { id: "profesor", label: "Profesor", detail: "Solicita un objeto de aprendizaje" },
+  { id: "Equipo institucional", label: "Equipo institucional", detail: "Solicita un objeto de aprendizaje" },
   { id: "boton", label: "Un botón", detail: "Dispara la solicitud desde Moodle" },
   { id: "ake", label: "Academic Knowledge Engine", detail: "Recupera y compone conocimiento verificado" },
   { id: "moodle", label: "Moodle", detail: "Recibe el contenido estructurado" },
@@ -212,7 +212,7 @@ export const CONSUMER_INFO: ConsumerInfo[] = [
     id: "learning-bridge",
     label: "Learning Bridge",
     does: "Actúa como integrador entre Moodle y el Academic Knowledge Engine, orquestando cada solicitud docente.",
-    consumes: "Solicitudes de profesores disparadas desde Moodle.",
+    consumes: "Solicitudes del Equipo institucional disparadas desde Moodle.",
     produces: "Contenido estructurado listo para que Learning Studio lo construya.",
   },
   {
