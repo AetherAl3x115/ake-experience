@@ -7,8 +7,9 @@ import type {
   FutureNode,
   TimelineMilestone,
   EcosystemNode,
-  ConsumerInfo,
+ ConsumerInfo,
   Institution,
+  RequirementArea,
 } from "../types";
 
 export const NAV_SECTIONS: NavSection[] = [
@@ -22,6 +23,7 @@ export const NAV_SECTIONS: NavSection[] = [
   { id: "learning-bridge", label: "Learning Bridge" },
   { id: "beneficios", label: "Beneficios" },
   { id: "roadmap", label: "Roadmap" },
+  { id: "requisitos", label: "Qué se requiere" },
   { id: "instituciones", label: "Referentes" },
   { id: "futuro", label: "Visión futura" },
 ];
@@ -286,5 +288,69 @@ export const INSTITUTIONS: Institution[] = [
     name: "Anthropic",
     category: "IA con contexto propio",
     description: "Claude integra herramientas y contexto extendido para razonar sobre el conocimiento específico de cada organización, no solo su entrenamiento general.",
+  },
+  
+];
+
+export const REQUIREMENTS: RequirementArea[] = [
+  {
+    id: "computo",
+    title: "Cómputo e inferencia",
+    description: "Capacidad de procesamiento elástica, agnóstica de proveedor, para generar embeddings y servir consultas sin degradar tiempos de respuesta.",
+    items: [
+      "Escalado según volumen de documentos y consultas simultáneas",
+      "Sin dependencia de un proveedor específico de nube",
+      "Puede alojarse en infraestructura propia de UVEG o en un proveedor externo",
+    ],
+  },
+  {
+    id: "almacenamiento",
+    title: "Base vectorial y almacenamiento",
+    description: "Un espacio dedicado para el índice vectorial (Qdrant) y para el corpus original — documentos, video, SCORM — con respaldo y control de acceso.",
+    items: [
+      "Almacenamiento persistente para el índice semántico",
+      "Almacenamiento de objetos para el corpus institucional",
+      "Respaldos automatizados y control de acceso por rol",
+    ],
+  },
+  {
+    id: "modelos-ia",
+    title: "Modelos de lenguaje",
+    description: "La generación de quizzes en el constructor ya está en producción. La generación de recursos completos a partir de los componentes del constructor todavía no arranca — no hay nada construido que se pierda al elegir el modelo más adecuado para esa tarea.",
+    items: [
+      "Generación de quizzes en el constructor — ya en producción",
+      "Propuesta de recursos a partir de los componentes disponibles — aún no iniciada",
+      "Selección de modelo para generación estructurada — en evaluación",
+    ],
+  },
+  {
+    id: "equipo",
+    title: "Equipo humano",
+    description: "El motor no se construye una vez y se abandona: requiere mantenimiento continuo, distinto al equipo que lo construyó.",
+    items: [
+      "Curaduría y validación continua del conocimiento",
+      "Mantenimiento de la infraestructura y monitoreo",
+      "Soporte a los equipos que consumen el motor",
+    ],
+  },
+  {
+    id: "gobernanza",
+    title: "Seguridad y gobernanza",
+    description: "Conocimiento institucional gobernado implica reglas claras sobre quién sube, valida y accede a cada fuente.",
+    items: [
+      "Control de acceso por rol y por fuente",
+      "Auditoría de cambios sobre el corpus",
+      "Cumplimiento con políticas institucionales de datos",
+    ],
+  },
+  {
+    id: "presupuesto",
+    title: "Presupuesto",
+    description: "Varía según volumen de uso real. Cifras por definir conforme se consoliden infraestructura y consumo de tokens.",
+    items: [
+      "Cómputo e infraestructura — por definir",
+      "Consumo de tokens de IA — por definir según uso",
+      "Sin costos de licenciamiento fijos por el momento",
+    ],
   },
 ];

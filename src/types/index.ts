@@ -64,3 +64,10 @@ export interface Institution {
   category: string;
   description: string;
 }
+
+export interface RequirementArea {
+  id: string;
+  title: string;
+  description: string;
+  items: string[];
+}
