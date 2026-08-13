@@ -178,7 +178,7 @@ export const ECOSYSTEM_NODES: EcosystemNode[] = [
   { id: "learning-bridge", label: "	Puente de Integración Institucional", x: 800, y: 240, kind: "consumer" },
   { id: "cursos", label: "Cursos", x: 800, y: 330, kind: "consumer" },
   { id: "examenes", label: "Exámenes", x: 800, y: 420, kind: "consumer" },
-  { id: "simuladores", label: "Simuladores", x: 800, y: 510, kind: "consumer" },
+  { id: "simuladores", label: "Escenarios simulados", x: 800, y: 510, kind: "consumer" },
 ];
 
 export const ECOSYSTEM_EDGES: [string, string][] = [
