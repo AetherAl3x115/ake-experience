@@ -171,31 +171,56 @@ export function Ecosystem() {
               );
             })}
 
-            {/* Etiquetas de grupo — separan visualmente el lado de las
-                fuentes (los 4 nodos "core") del lado de los consumidores,
-                sin depender del color/tamaño para que se entienda */}
-            <text
-              x={230}
-              y={22}
-              textAnchor="middle"
-              fontFamily="IBM Plex Mono, monospace"
-              fontSize={13}
-              letterSpacing={1.5}
-              fill="rgba(244,241,232,0.4)"
-            >
-              FUENTES DE INFORMACIÓN
-            </text>
-            <text
-              x={800}
-              y={22}
-              textAnchor="middle"
-              fontFamily="IBM Plex Mono, monospace"
-              fontSize={13}
-              letterSpacing={1.5}
-              fill="rgba(244,241,232,0.4)"
-            >
-              CONSUMIDORES
-            </text>
+            {/* Etiquetas de grupo en badge — borde+fondo entintado en
+                dorado, mismo acento que el resto del diagrama, para que
+                resalten sobre el fondo oscuro en vez de perderse como
+                texto plano */}
+            <g>
+              <rect
+                x={230 - 108}
+                y={8}
+                width={216}
+                height={26}
+                rx={13}
+                fill="rgba(215,167,88,0.1)"
+                stroke="rgba(215,167,88,0.4)"
+                strokeWidth={1}
+              />
+              <text
+                x={230}
+                y={25}
+                textAnchor="middle"
+                fontFamily="IBM Plex Mono, monospace"
+                fontSize={13}
+                letterSpacing={1.5}
+                fill="#ecca8e"
+              >
+                FUENTES DE INFORMACIÓN
+              </text>
+            </g>
+            <g>
+              <rect
+                x={800 - 70}
+                y={8}
+                width={140}
+                height={26}
+                rx={13}
+                fill="rgba(215,167,88,0.1)"
+                stroke="rgba(215,167,88,0.4)"
+                strokeWidth={1}
+              />
+              <text
+                x={800}
+                y={25}
+                textAnchor="middle"
+                fontFamily="IBM Plex Mono, monospace"
+                fontSize={13}
+                letterSpacing={1.5}
+                fill="#ecca8e"
+              >
+                CONSUMIDORES
+              </text>
+            </g>
           </svg>
           <p className="mt-2 text-center lg:text-left font-mono text-[12px] text-ink-faint tracking-wide">
             Pasa el cursor (o toca) cada consumidor para ver su detalle →
