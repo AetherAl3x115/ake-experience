@@ -24,22 +24,34 @@ export function FutureVision() {
           const rad = (node.angle * Math.PI) / 180;
           const x = 50 + Math.cos(rad) * radius;
           const y = 50 + Math.sin(rad) * radius;
+
           return (
             <div key={node.id}>
+              {/* Pulso viajero — sale del núcleo (50%,50%), llega al nodo,
+                  desaparece, repite en loop. Delay escalonado por nodo
+                  (i * 0.3) para que no salgan todos al mismo tiempo —
+                  se ve como si el núcleo "explorara" cada rama por turnos.
+                  Reemplaza la línea estática de rotate() que no coincidía
+                  con el ángulo real usado para calcular x/y de cada nodo. */}
               <motion.div
-                className="absolute w-px bg-border-strong origin-top"
-                style={{
-                  left: "50%",
-                  top: "50%",
-                  height: `${radius}%`,
-                  transform: `rotate(${node.angle}deg)`,
-                  transformOrigin: "top",
+                className="absolute w-1.5 h-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(215,167,88,0.8)]"
+                style={{ left: "50%", top: "50%" }}
+                initial={{ x: "-50%", y: "-50%", opacity: 0 }}
+                animate={{
+                  left: ["50%", "50%", `${x}%`, `${x}%`],
+                  top: ["50%", "50%", `${y}%`, `${y}%`],
+                  opacity: [0, 1, 1, 0],
                 }}
-                initial={{ scaleY: 0 }}
-                whileInView={{ scaleY: 1 }}
-                viewport={{ once: true, amount: 0.4 }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
+                transition={{
+                  duration: 2.2,
+                  times: [0, 0.05, 0.85, 1],
+                  repeat: Infinity,
+                  repeatDelay: 0.6,
+                  delay: i * 0.3,
+                  ease: "easeInOut",
+                }}
               />
+
               <motion.div
                 className="absolute flex flex-col items-center gap-2"
                 style={{
