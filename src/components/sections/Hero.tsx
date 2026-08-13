@@ -43,9 +43,9 @@ export function Hero() {
         transition={{ duration: 0.9, delay: 0.7 }}
         className="mt-8 text-center text-ink-dim text-lg max-w-xl"
       >
-        Un recorrido por el Academic Knowledge Engine: la infraestructura
-        que convierte el conocimiento disperso en un activo institucional
-        gobernado.
+        Un recorrido por el Motor de Producción Académica Inteligente: la
+        infraestructura que convierte el conocimiento disperso en un activo
+        institucional gobernado.
       </motion.p>
 
       <motion.div

@@ -89,7 +89,7 @@ export const LEARNING_STUDIO_FEATURES = [
 export const BRIDGE_FLOW: FlowStep[] = [
   { id: "Equipo institucional", label: "Equipo institucional", detail: "Solicita un objeto de aprendizaje" },
   { id: "boton", label: "Un botón", detail: "Dispara la solicitud desde Moodle" },
-  { id: "ake", label: "Academic Knowledge Engine", detail: "Recupera y compone conocimiento verificado" },
+  { id: "ake", label: "Motor de Producción Académica Inteligente", detail: "Recupera y compone conocimiento verificado" },
   { id: "moodle", label: "Moodle", detail: "Recibe el contenido estructurado" },
   { id: "studio", label: "Learning Studio", detail: "Construye el objeto de aprendizaje" },
   { id: "scorm", label: "SCORM", detail: "Empaqueta el resultado final" },
@@ -164,7 +164,7 @@ export const TIMELINE: TimelineMilestone[] = [
   { year: "2018", title: "Repositorios institucionales", description: "Las universidades empiezan a centralizar documentos, sin una capa que los interprete." },
   { year: "2023", title: "Modelos generativos (LLMs)", description: "La IA generativa entra al aula, pero sin anclaje al conocimiento propio de la institución." },
   { year: "2025", title: "RAG y búsqueda semántica", description: "La recuperación aumentada resuelve el problema de la alucinación: primero la fuente, después la respuesta." },
-  { year: "2026", title: "Academic Knowledge Engine", description: "UVEG convierte su propio conocimiento en la infraestructura que gobierna todo lo anterior.", highlight: true },
+  { year: "2026", title: "Motor de Producción Académica Inteligente", description: "UVEG convierte su propio conocimiento en la infraestructura que gobierna todo lo anterior.", highlight: true },
 ];
 
 export const ECOSYSTEM_NODES: EcosystemNode[] = [
@@ -213,7 +213,7 @@ export const CONSUMER_INFO: ConsumerInfo[] = [
   {
     id: "learning-bridge",
     label: "Learning Bridge",
-    does: "Actúa como integrador entre Moodle y el Academic Knowledge Engine, orquestando cada solicitud docente.",
+    does: "Actúa como integrador entre Moodle y el Motor de Producción Académica Inteligente, orquestando cada solicitud docente.",
     consumes: "Solicitudes del Equipo institucional disparadas desde Moodle.",
     produces: "Contenido estructurado listo para que Learning Studio lo construya.",
   },
