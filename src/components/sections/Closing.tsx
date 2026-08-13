@@ -6,7 +6,7 @@ export function Closing() {
     <footer className="relative py-32 px-6 flex flex-col items-center text-center border-t border-border">
       <Reveal variants={fadeUp}>
         <span className="font-mono text-xs tracking-[0.25em] uppercase text-gold">
-          Academic Knowledge Engine
+          Motor de Producción Académica Inteligente
         </span>
       </Reveal>
       <Reveal variants={fadeUp} delay={0.1}>

@@ -12,7 +12,7 @@ export function WhyNow() {
         eyebrow="¿Por qué ahora?"
         align="center"
         title="La evolución natural de dos décadas de educación digital"
-        description="Cada etapa resolvió un problema y expuso el siguiente. El Academic Knowledge Engine no aparece de la nada: es donde converge todo lo que la educación digital llevaba años construyendo."
+        description="Cada etapa resolvió un problema y expuso el siguiente. El Motor de Producción Académica Inteligente no aparece de la nada: es donde converge todo lo que la educación digital llevaba años construyendo."
       />
 
       <div className="relative mt-20 max-w-2xl w-full">
@@ -34,7 +34,11 @@ export function WhyNow() {
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.05,
+                ease: [0.16, 1, 0.3, 1],
+              }}
             >
               <motion.div
                 className={`absolute left-[26px] md:left-1/2 top-1.5 -translate-x-1/2 rounded-full z-10 ${

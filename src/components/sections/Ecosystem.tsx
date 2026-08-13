@@ -35,7 +35,7 @@ export function Ecosystem() {
         eyebrow="Arquitectura general del ecosistema"
         align="center"
         title="Un motor, múltiples consumidores"
-        description="El Academic Knowledge Engine no alimenta solo un chatbot. Pasa el cursor sobre cada consumidor para ver qué recibe del motor y qué produce con ello."
+        description="El Motor de Producción Académica Inteligente no alimenta solo un chatbot. Pasa el cursor sobre cada consumidor para ver qué recibe del motor y qué produce con ello."
       />
 
       <div className="mt-16 max-w-6xl w-full grid lg:grid-cols-[1fr_320px] gap-8 items-start">
@@ -44,7 +44,7 @@ export function Ecosystem() {
             viewBox="0 0 900 570"
             className="w-full min-w-[680px] h-auto"
             role="img"
-            aria-label="Diagrama del ecosistema del Academic Knowledge Engine"
+            aria-label="Diagrama del ecosistema del Motor de Producción Académica Inteligente"
           >
             {CORE_EDGES.map(([from, to]) => {
               const a = findNode(from);

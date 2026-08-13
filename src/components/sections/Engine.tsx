@@ -10,7 +10,7 @@ export function Engine() {
       className="relative min-h-screen py-32 px-6 flex flex-col items-center bg-bg-alt border-y border-border"
     >
       <SectionHeading
-        eyebrow="Academic Knowledge Engine"
+        eyebrow="Motor de Producción Académica Inteligente"
         align="center"
         title="La infraestructura que gobierna el conocimiento"
         description="No es un chatbot ni un buscador. Es la capa que adquiere, organiza, versiona y sirve conocimiento académico a todo lo demás."
@@ -32,8 +32,12 @@ export function Engine() {
             <span className="font-mono text-xs text-ink-faint">
               {String(i + 1).padStart(2, "0")}
             </span>
-            <h3 className="font-display text-xl mt-3 text-ink">{layer.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-dim">{layer.body}</p>
+            <h3 className="font-display text-xl mt-3 text-ink">
+              {layer.title}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink-dim">
+              {layer.body}
+            </p>
             <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-gold/0 group-hover:via-gold/50 to-transparent transition-all duration-500" />
           </motion.div>
         ))}

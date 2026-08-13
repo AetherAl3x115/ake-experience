@@ -13,7 +13,7 @@ export function Institutions() {
         eyebrow="Referentes"
         align="center"
         title="Instituciones y empresas que siguen esta dirección"
-        description="Esto no significa que operen con la misma arquitectura. Significa que la dirección tecnológica del Academic Knowledge Engine — conocimiento propio, gobernado, y recuperado antes de generar — está alineada con hacia dónde se mueve la vanguardia."
+        description="Esto no significa que operen con la misma arquitectura. Significa que la dirección tecnológica del Motor de Producción Académica Inteligente — conocimiento propio, gobernado, y recuperado antes de generar — está alineada con hacia dónde se mueve la vanguardia."
       />
 
       <motion.div

@@ -13,7 +13,7 @@ export function Vision() {
         eyebrow="La visión"
         align="center"
         title="Todo el conocimiento converge en un solo motor"
-        description="El Academic Knowledge Engine se convierte en el núcleo del ecosistema. Cada fuente deja de estar aislada y pasa a formar parte de un mismo cuerpo de conocimiento, gobernado y auditable."
+        description="El Motor de Producción Académica Inteligente se convierte en el núcleo del ecosistema. Cada fuente deja de estar aislada y pasa a formar parte de un mismo cuerpo de conocimiento, gobernado y auditable."
       />
 
       <div className="relative w-full max-w-2xl aspect-square mt-16 flex items-center justify-center">
@@ -55,7 +55,7 @@ export function Vision() {
       </div>
 
       <p className="mt-6 font-mono text-sm text-gold tracking-wide">
-        Academic Knowledge Engine
+        Motor de Producción Académica Inteligente
       </p>
     </section>
   );
