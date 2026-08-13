@@ -65,9 +65,15 @@ export interface Institution {
   description: string;
 }
 
+export interface RequirementGroup {
+  label?: string;
+  items: string[];
+}
+
 export interface RequirementArea {
   id: string;
   title: string;
-  description: string;
-  items: string[];
+  tagline: string;
+  groups: RequirementGroup[];
+  note?: string;
 }

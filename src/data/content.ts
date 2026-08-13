@@ -296,61 +296,131 @@ export const REQUIREMENTS: RequirementArea[] = [
   {
     id: "computo",
     title: "Cómputo e inferencia",
-    description: "Capacidad de procesamiento elástica, agnóstica de proveedor, para generar embeddings y servir consultas sin degradar tiempos de respuesta.",
-    items: [
-      "Escalado según volumen de documentos y consultas simultáneas",
-      "Sin dependencia de un proveedor específico de nube",
-      "Puede alojarse en infraestructura propia de UVEG o en un proveedor externo",
+    tagline: "¿Qué capacidad computacional necesita?",
+    groups: [
+      {
+        label: "Infraestructura propia (UVEG)",
+        items: [
+          "Generación de embeddings",
+          "Indexación y procesamiento de documentos",
+          "Consultas semánticas",
+          "Ejecución de servicios del Engine",
+          "Escalamiento según concurrencia",
+        ],
+      },
+      {
+        label: "Proveedor de IA (inferencia externa)",
+        items: ["Generación de recursos mediante modelos de lenguaje"],
+      },
     ],
+    note: "El Engine es agnóstico al proveedor de IA: la infraestructura propia no depende de qué modelo se use.",
   },
   {
-    id: "almacenamiento",
-    title: "Base vectorial y almacenamiento",
-    description: "Un espacio dedicado para el índice vectorial (Qdrant) y para el corpus original — documentos, video, SCORM — con respaldo y control de acceso.",
-    items: [
-      "Almacenamiento persistente para el índice semántico",
-      "Almacenamiento de objetos para el corpus institucional",
-      "Respaldos automatizados y control de acceso por rol",
+    id: "conocimiento",
+    title: "Conocimiento y almacenamiento",
+    tagline: "¿Dónde vive y cómo se representa?",
+    groups: [
+      {
+        label: "Capa vectorial",
+        items: ["Qdrant", "Embeddings institucionales", "Índices semánticos", "Recuperación por similitud"],
+      },
+      {
+        label: "Capa de almacenamiento",
+        items: ["Documentos originales", "PDFs y recursos", "Paquetes SCORM", "Video y metadatos", "Versionado y respaldos"],
+      },
+      {
+        label: "Fuentes del corpus",
+        items: [
+          "Documentos académicos",
+          "Cursos existentes",
+          "Recursos SCORM",
+          "Materiales institucionales",
+          "Bancos de preguntas",
+          "Recursos generados y validados",
+          "Fuentes externas autorizadas",
+        ],
+      },
     ],
+    note: "Qdrant no almacena el conocimiento — almacena la representación que permite encontrarlo. El corpus original vive en almacenamiento persistente, y no todo lo que entra tiene el mismo nivel de confianza.",
   },
   {
     id: "modelos-ia",
     title: "Modelos de lenguaje",
-    description: "La generación de quizzes en el constructor ya está en producción. La generación de recursos completos a partir de los componentes del constructor todavía no arranca — no hay nada construido que se pierda al elegir el modelo más adecuado para esa tarea.",
-    items: [
-      "Generación de quizzes en el constructor — ya en producción",
-      "Propuesta de recursos a partir de los componentes disponibles — aún no iniciada",
-      "Selección de modelo para generación estructurada — en evaluación",
+    tagline: "¿Cómo se transforma el conocimiento?",
+    groups: [
+      { label: "Hoy", items: ["Generación de quizzes — ya integrada al constructor"] },
+      {
+        label: "Próximo paso",
+        items: ["Generación estructurada de recursos a partir del conocimiento recuperado por el Engine"],
+      },
+      { label: "Arquitectura futura", items: ["Selección de modelo desacoplada del Engine"] },
+    ],
+    note: "El modelo es intercambiable; el conocimiento y la lógica del Engine permanecen.",
+  },
+  {
+    id: "integraciones",
+    title: "Integraciones",
+    tagline: "¿Quién consume el Engine?",
+    groups: [
+      {
+        items: [
+          "Moodle",
+          "Constructor",
+          "APIs institucionales",
+          "Servicios internos",
+          "Futuras aplicaciones académicas",
+          "Asistentes o herramientas de consulta",
+        ],
+      },
+    ],
+    note: "El Engine no es otro sistema que abrir — es una capa que otros sistemas consumen.",
+  },
+  {
+    id: "gobernanza",
+    title: "Seguridad y gobernanza",
+    tagline: "¿Quién controla el conocimiento?",
+    groups: [
+      {
+        label: "Gobierno del conocimiento",
+        items: [
+          "Quién puede incorporar conocimiento",
+          "Quién puede validarlo",
+          "Quién puede modificarlo",
+          "Quién puede consultarlo",
+          "Trazabilidad de cambios",
+          "Versionado",
+          "Fuentes autorizadas",
+        ],
+      },
     ],
   },
   {
     id: "equipo",
     title: "Equipo humano",
-    description: "El motor no se construye una vez y se abandona: requiere mantenimiento continuo, distinto al equipo que lo construyó.",
-    items: [
-      "Curaduría y validación continua del conocimiento",
-      "Mantenimiento de la infraestructura y monitoreo",
-      "Soporte a los equipos que consumen el motor",
+    tagline: "¿Quién mantiene y valida todo esto?",
+    groups: [
+      {
+        label: "Roles",
+        items: [
+          "Curaduría académica — valida el conocimiento",
+          "Ingeniería — desarrolla y mantiene el Engine",
+          "Infraestructura — monitoreo, disponibilidad y respaldos",
+          "Soporte — atiende a los consumidores del Engine",
+          "Gobernanza — define quién puede incorporar o modificar conocimiento",
+        ],
+      },
     ],
-  },
-  {
-    id: "gobernanza",
-    title: "Seguridad y gobernanza",
-    description: "Conocimiento institucional gobernado implica reglas claras sobre quién sube, valida y accede a cada fuente.",
-    items: [
-      "Control de acceso por rol y por fuente",
-      "Auditoría de cambios sobre el corpus",
-      "Cumplimiento con políticas institucionales de datos",
-    ],
+    note: "El conocimiento no se vuelve confiable solo porque lo procese una IA — hay responsabilidad humana detrás.",
   },
   {
     id: "presupuesto",
     title: "Presupuesto",
-    description: "Varía según volumen de uso real. Cifras por definir conforme se consoliden infraestructura y consumo de tokens.",
-    items: [
-      "Cómputo e infraestructura — por definir",
-      "Consumo de tokens de IA — por definir según uso",
-      "Sin costos de licenciamiento fijos por el momento",
+    tagline: "¿Cuánto cuesta operar cada capa?",
+    groups: [
+      { label: "Infraestructura", items: ["Cómputo", "Base vectorial", "Almacenamiento", "Red y operación"] },
+      { label: "IA", items: ["Embeddings", "Inferencia", "Tokens de entrada/salida"] },
+      { label: "Operación", items: ["Monitoreo", "Respaldos", "Mantenimiento", "Soporte"] },
     ],
+    note: "Costo variable principalmente por volumen de conocimiento, consultas concurrentes y consumo de modelos.",
   },
 ];
