@@ -179,7 +179,7 @@ export function Ecosystem() {
               y={22}
               textAnchor="middle"
               fontFamily="IBM Plex Mono, monospace"
-              fontSize={11}
+              fontSize={13}
               letterSpacing={1.5}
               fill="rgba(244,241,232,0.4)"
             >
@@ -190,7 +190,7 @@ export function Ecosystem() {
               y={22}
               textAnchor="middle"
               fontFamily="IBM Plex Mono, monospace"
-              fontSize={11}
+              fontSize={13}
               letterSpacing={1.5}
               fill="rgba(244,241,232,0.4)"
             >
