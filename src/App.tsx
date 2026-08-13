@@ -9,6 +9,7 @@ import { LearningStudio } from "./components/sections/LearningStudio";
 import { LearningBridge } from "./components/sections/LearningBridge";
 import { Benefits } from "./components/sections/Benefits";
 import { Roadmap } from "./components/sections/Roadmap";
+import { ExecutionPhases } from "./components/sections/ExecutionPhases";
 import { Requirements } from "./components/sections/Requirements";
 import { Institutions } from "./components/sections/Institutions";
 import { FutureVision } from "./components/sections/FutureVision";
@@ -30,6 +31,7 @@ function App() {
         <LearningBridge />
         <Benefits />
         <Roadmap />
+        <ExecutionPhases />
         <Requirements />
         <Institutions />
         <FutureVision />

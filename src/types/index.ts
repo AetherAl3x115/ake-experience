@@ -77,3 +77,15 @@ export interface RequirementArea {
   groups: RequirementGroup[];
   note?: string;
 }
+
+export interface ExecutionPhase {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  // 0-100 — qué tan avanzada está esta fase hoy
+  progress: number;
+  status: "completado" | "en_progreso" | "pendiente";
+  // true = no bloquea el plan principal (Simuladores/Chatbot)
+  optional?: boolean;
+}

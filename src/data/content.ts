@@ -10,6 +10,7 @@ import type {
  ConsumerInfo,
   Institution,
   RequirementArea,
+  ExecutionPhase,
 } from "../types";
 
 export const NAV_SECTIONS: NavSection[] = [
@@ -290,6 +291,58 @@ export const INSTITUTIONS: Institution[] = [
     description: "Claude integra herramientas y contexto extendido para razonar sobre el conocimiento específico de cada organización, no solo su entrenamiento general.",
   },
   
+];
+
+export const EXECUTION_PHASES: ExecutionPhase[] = [
+  {
+    id: "constructor",
+    number: "01",
+    title: "Constructor de Producción Académica",
+    description: "Base ya construida y en producción — se cierran los pendientes restantes antes de congelarlo y conectarlo al motor.",
+    progress: 65,
+    status: "en_progreso",
+  },
+  {
+    id: "motor",
+    number: "02",
+    title: "Motor de Conocimiento",
+    description: "Sus piezas centrales (Qdrant, chunking, embeddings, Banco Maestro) ya existen — falta formalizarlas como capa gobernada e independiente.",
+    progress: 35,
+    status: "pendiente",
+  },
+  {
+    id: "orquestador",
+    number: "03",
+    title: "AI Orchestrator",
+    description: "Unifica las llamadas a IA hoy dispersas en un solo contrato gobernado — la pieza central que decide cómo se compone el conocimiento.",
+    progress: 0,
+    status: "pendiente",
+  },
+  {
+    id: "plugin-nativo",
+    number: "04",
+    title: "Puente de Integración — actividades nativas",
+    description: "Primer consumidor visible del motor conectado a Moodle: genera actividades nativas desde conocimiento gobernado.",
+    progress: 0,
+    status: "pendiente",
+  },
+  {
+    id: "plugin-scorm",
+    number: "05",
+    title: "Puente + Constructor — recursos SCORM",
+    description: "El mismo puente extiende su alcance para generar recursos SCORM personalizados directo desde el Constructor.",
+    progress: 0,
+    status: "pendiente",
+  },
+  {
+    id: "extra",
+    number: "+",
+    title: "Simuladores y Chatbot institucional",
+    description: "Extensiones del ecosistema una vez que el flujo principal esté sólido — no bloquean ni comprometen el plan anterior.",
+    progress: 0,
+    status: "pendiente",
+    optional: true,
+  },
 ];
 
 export const REQUIREMENTS: RequirementArea[] = [
