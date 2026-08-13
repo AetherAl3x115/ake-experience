@@ -30,10 +30,10 @@ export function Problem() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(196,106,68,0.08),transparent_60%)]" />
 
       <SectionHeading
-        eyebrow="El problema"
+        eyebrow="PROBLEMÁTICA A FUTURO"
         align="center"
         title="El conocimiento institucional vive disperso"
-        description="Cada documento, curso y examen existe por su cuenta. Sin una fuente común, el mismo concepto puede explicarse de formas distintas — y hasta contradictorias — según quién lo escribió y cuándo."
+        description="Actualmente, soluciones como Drive o servidores locales (NAS) responden bien a las necesidades del día a día. Sin embargo, a medida que la institución crece, depender de carpetas independientes hará insostenible la búsqueda, actualización e integración del contenido a largo plazo."
       />
 
       <div className="relative w-full max-w-3xl aspect-square mt-16">
