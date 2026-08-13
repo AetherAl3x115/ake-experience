@@ -51,10 +51,10 @@ export function LearningStudio() {
       className="relative min-h-screen py-32 px-6 flex flex-col items-center"
     >
       <SectionHeading
-        eyebrow="Learning Studio"
+        eyebrow="Constructor de Producción Académica"
         align="center"
         title="Más que un constructor: un sistema completo"
-        description="Learning Studio no solo arma objetos de aprendizaje. Gestiona plantillas, usuarios, versiones, respaldos y su propia integración con Moodle — con IA integrada en cada paso."
+        description="Constructor de Producción Académica no solo arma objetos de aprendizaje. Gestiona plantillas, usuarios, versiones, respaldos y su propia integración con Moodle — con IA integrada en cada paso."
       />
 
       <div className="flex flex-col gap-6 mt-16 max-w-5xl w-full">
@@ -62,7 +62,7 @@ export function LearningStudio() {
         <Reveal variants={fadeUp}>
           <Shot
             src={plataformasShot}
-            alt="Panel principal de plataformas Moodle administradas desde Learning Studio"
+            alt="Panel principal de plataformas Moodle administradas desde Constructor de Producción Académica"
             caption="Panel principal — plataformas Moodle administradas"
           />
         </Reveal>
@@ -72,7 +72,7 @@ export function LearningStudio() {
           <Reveal variants={fadeUp} delay={0.05}>
             <Shot
               src={cursosShot}
-              alt="Cursos disponibles dentro de una carrera en Learning Studio"
+              alt="Cursos disponibles dentro de una carrera en el constructor de Producción Académica"
               caption="Cursos disponibles por carrera"
             />
           </Reveal>
@@ -89,7 +89,7 @@ export function LearningStudio() {
         <Reveal variants={fadeUp} delay={0.05}>
           <Shot
             src={constructorShot}
-            alt="Constructor de actividades de Learning Studio con canvas y vista previa en tiempo real"
+            alt="Constructor de actividades de constructor de Producción Académica con canvas y vista previa en tiempo real"
             caption="Constructor de actividades — edición en tiempo real"
           />
         </Reveal>
