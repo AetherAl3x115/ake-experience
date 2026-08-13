@@ -227,9 +227,9 @@ export function Ecosystem() {
                 </span>
                 <p className="text-sm text-ink-dim mt-3 leading-relaxed">
                   Selecciona un nodo del diagrama — Chatbot, Constructor de
-                  Producción Académica, Learning Bridge, Cursos, Exámenes o
-                  Simuladores — para ver qué recibe del motor y qué entrega de
-                  vuelta al ecosistema.
+                  Producción Académica, Puente de Integración Institucional,
+                  Cursos, Exámenes o Simuladores — para ver qué recibe del motor
+                  y qué entrega de vuelta al ecosistema.
                 </p>
               </motion.div>
             )}

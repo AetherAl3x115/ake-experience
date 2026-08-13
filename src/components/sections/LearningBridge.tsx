@@ -10,7 +10,7 @@ export function LearningBridge() {
       className="relative min-h-screen py-32 px-6 flex flex-col items-center bg-bg-alt border-y border-border"
     >
       <SectionHeading
-        eyebrow="Learning Bridge"
+        eyebrow="Puente de Integración Institucional"
         align="center"
         title="Moodle y el motor, conectados por un solo puente"
         description="Un profesor no necesita saber qué ocurre por dentro. Presiona un botón, y el conocimiento verificado recorre el puente hasta convertirse en un curso terminado."
