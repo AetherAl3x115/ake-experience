@@ -170,15 +170,41 @@ export function Ecosystem() {
                 </motion.g>
               );
             })}
+
+            {/* Etiquetas de grupo — separan visualmente el lado de las
+                fuentes (los 4 nodos "core") del lado de los consumidores,
+                sin depender del color/tamaño para que se entienda */}
+            <text
+              x={230}
+              y={22}
+              textAnchor="middle"
+              fontFamily="IBM Plex Mono, monospace"
+              fontSize={11}
+              letterSpacing={1.5}
+              fill="rgba(244,241,232,0.4)"
+            >
+              FUENTES DE INFORMACIÓN
+            </text>
+            <text
+              x={800}
+              y={22}
+              textAnchor="middle"
+              fontFamily="IBM Plex Mono, monospace"
+              fontSize={11}
+              letterSpacing={1.5}
+              fill="rgba(244,241,232,0.4)"
+            >
+              CONSUMIDORES
+            </text>
           </svg>
           <p className="mt-2 text-center lg:text-left font-mono text-[12px] text-ink-faint tracking-wide">
             Pasa el cursor (o toca) cada consumidor para ver su detalle →
           </p>
         </div>
 
-        <div className="min-h-[220px] rounded-2xl border border-border bg-surface/50 backdrop-blur p-6">
-          <AnimatePresence mode="wait">
-            {activeInfo ? (
+        {activeInfo && (
+          <div className="min-h-[220px] rounded-2xl border border-border bg-surface/50 backdrop-blur p-6">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={activeInfo.id}
                 initial={{ opacity: 0, y: 8 }}
@@ -214,27 +240,9 @@ export function Ecosystem() {
                   </div>
                 </div>
               </motion.div>
-            ) : (
-              <motion.div
-                key="placeholder"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="h-full flex flex-col justify-center"
-              >
-                <span className="font-mono text-xs text-ink-faint uppercase tracking-wide">
-                  Detalle del consumidor
-                </span>
-                <p className="text-sm text-ink-dim mt-3 leading-relaxed">
-                  Selecciona un nodo del diagrama — Chatbot, Constructor de
-                  Producción Académica, Puente de Integración Institucional,
-                  Cursos, Exámenes o Simuladores — para ver qué recibe del motor
-                  y qué entrega de vuelta al ecosistema.
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </section>
   );
