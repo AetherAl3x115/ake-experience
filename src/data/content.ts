@@ -7,7 +7,7 @@ import type {
   FutureNode,
   TimelineMilestone,
   EcosystemNode,
- ConsumerInfo,
+  ConsumerInfo,
   Institution,
   RequirementArea,
   ExecutionPhase,
@@ -88,19 +88,19 @@ export const LEARNING_STUDIO_FEATURES = [
 ];
 
 export const BRIDGE_FLOW: FlowStep[] = [
-  { id: "Equipo institucional", label: "Equipo institucional", detail: "Solicita un objeto de aprendizaje" },
+  { id: "Equipo institucional", label: "Equipo institucional", detail: "Solicita un recurso de aprendizaje" },
   { id: "boton", label: "Un botón", detail: "Dispara la solicitud desde Moodle" },
   { id: "ake", label: "Motor de Producción Académica Inteligente", detail: "Recupera y compone conocimiento verificado" },
-  { id: "moodle", label: "Moodle", detail: "Recibe el contenido estructurado" },
-  { id: "studio", label: "Constructor de Producción Académica", detail: "Construye el objeto de aprendizaje" },
+  { id: "studio", label: "Constructor de Producción Académica", detail: "Construye el recurso de aprendizaje" },
   { id: "scorm", label: "SCORM", detail: "Empaqueta el resultado final" },
-  { id: "curso", label: "Curso terminado", detail: "Disponible para el estudiante" },
+  { id: "moodle", label: "Moodle", detail: "Recibe el recurso terminado" },
+  { id: "curso", label: "Recurso terminado", detail: "Disponible para el estudiante" },
 ];
 
 export const BENEFITS: BenefitGroup[] = [
   {
     eyebrow: "01",
-   title: "Equipo institucional",
+    title: "Equipo institucional",
     items: [
       "Menos horas construyendo desde cero",
       "Contenido fundamentado, no improvisado",
@@ -139,14 +139,8 @@ export const BENEFITS: BenefitGroup[] = [
 export const ROADMAP: RoadmapPhase[] = [
   { number: "01", title: "Digitalización institucional", description: "Levantamiento y catalogación del conocimiento existente." },
   { number: "02", title: "Knowledge Repository", description: "Repositorio gobernado, versionado y consultable." },
-  { number: "03", title: "Embeddings + Qdrant", description: "Recuperación semántica sobre el corpus institucional." },
-  { number: "04", title: "AI Orchestrator", description: "Composición gobernada de conocimiento verificado." },
-  { number: "05", title: "Chatbot institucional", description: "Primer consumidor conversacional en producción." },
-  { number: "06", title: "Constructor inteligente", description: "El constructor de Producción Académica migra a consumir el motor." },
-  { number: "07", title: "Simuladores", description: "Casos con consistencia factual estricta." },
-  { number: "08", title: "Knowledge Connectors", description: "Fuentes externas bajo la misma gobernanza." },
-  { number: "09", title: "Aprendizaje incremental", description: "El motor detecta y cierra sus propios vacíos." },
-  { number: "10", title: "Modelos locales", description: "Independencia total de proveedores externos." },
+  { number: "03", title: "Chatbot institucional", description: "Primer consumidor conversacional en producción." },
+  { number: "04", title: "Simuladores", description: "Casos con consistencia factual estricta." },
 ];
 
 export const FUTURE_NODES: FutureNode[] = [
@@ -290,7 +284,7 @@ export const INSTITUTIONS: Institution[] = [
     category: "IA con contexto propio",
     description: "Claude integra herramientas y contexto extendido para razonar sobre el conocimiento específico de cada organización, no solo su entrenamiento general.",
   },
-  
+
 ];
 
 export const EXECUTION_PHASES: ExecutionPhase[] = [
@@ -299,16 +293,16 @@ export const EXECUTION_PHASES: ExecutionPhase[] = [
     number: "01",
     title: "Constructor de Producción Académica",
     description: "Base ya construida y en producción — se cierran los pendientes restantes antes de congelarlo y conectarlo al motor.",
-    progress: 65,
+    progress: 90,
     status: "en_progreso",
   },
   {
     id: "motor",
     number: "02",
     title: "Motor de Conocimiento",
-    description: "Sus piezas centrales (Qdrant, chunking, embeddings, Banco Maestro) ya existen — falta formalizarlas como capa gobernada e independiente.",
-    progress: 35,
-    status: "pendiente",
+    description: "Sus piezas centrales ya están construidas y en producción — chunking, embeddings, Qdrant, Banco Maestro y el flujo de recuperación (RAG) — falta formalizarlas como capa gobernada e independiente.",
+    progress: 85,
+    status: "en_progreso",
   },
   {
     id: "orquestador",
@@ -337,8 +331,8 @@ export const EXECUTION_PHASES: ExecutionPhase[] = [
   {
     id: "extra",
     number: "+",
-    title: "Simuladores y Chatbot institucional",
-    description: "Extensiones del ecosistema una vez que el flujo principal esté sólido — no bloquean ni comprometen el plan anterior.",
+    title: "Simuladores",
+    description: "Extensión del ecosistema una vez que el flujo principal esté sólido — no bloquea ni compromete el plan anterior. El Chatbot institucional, otra extensión prevista aquí, ya está construido y en producción.",
     progress: 0,
     status: "pendiente",
     optional: true,
@@ -347,18 +341,23 @@ export const EXECUTION_PHASES: ExecutionPhase[] = [
 
 export const REQUIREMENTS: RequirementArea[] = [
   {
-    id: "computo",
-    title: "Cómputo e inferencia",
-    tagline: "¿Qué capacidad computacional necesita?",
+    id: "infraestructura",
+    title: "Infraestructura y cómputo",
+    tagline: "¿Qué necesita para operar y dónde vive el conocimiento?",
     groups: [
       {
-        label: "Infraestructura propia (UVEG)",
+        label: "Cómputo (infraestructura propia UVEG)",
         items: [
-          "Generación de embeddings",
-          "Indexación y procesamiento de documentos",
-          "Consultas semánticas",
-          "Ejecución de servicios del Engine",
+          "Generación de embeddings e indexación de documentos",
+          "Consultas semánticas y ejecución de servicios del Engine",
           "Escalamiento según concurrencia",
+        ],
+      },
+      {
+        label: "Almacenamiento y capa vectorial",
+        items: [
+          "Qdrant, embeddings e índices semánticos",
+          "Documentos originales, PDFs, paquetes SCORM, versionado y respaldos",
         ],
       },
       {
@@ -366,39 +365,11 @@ export const REQUIREMENTS: RequirementArea[] = [
         items: ["Generación de recursos mediante modelos de lenguaje"],
       },
     ],
-    note: "El Engine es agnóstico al proveedor de IA: la infraestructura propia no depende de qué modelo se use.",
-  },
-  {
-    id: "conocimiento",
-    title: "Conocimiento y almacenamiento",
-    tagline: "¿Dónde vive y cómo se representa?",
-    groups: [
-      {
-        label: "Capa vectorial",
-        items: ["Qdrant", "Embeddings institucionales", "Índices semánticos", "Recuperación por similitud"],
-      },
-      {
-        label: "Capa de almacenamiento",
-        items: ["Documentos originales", "PDFs y recursos", "Paquetes SCORM", "Video y metadatos", "Versionado y respaldos"],
-      },
-      {
-        label: "Fuentes del corpus",
-        items: [
-          "Documentos académicos",
-          "Cursos existentes",
-          "Recursos SCORM",
-          "Materiales institucionales",
-          "Bancos de preguntas",
-          "Recursos generados y validados",
-          "Fuentes externas autorizadas",
-        ],
-      },
-    ],
-    note: "Qdrant no almacena el conocimiento — almacena la representación que permite encontrarlo. El corpus original vive en almacenamiento persistente, y no todo lo que entra tiene el mismo nivel de confianza.",
+    note: "El Engine es agnóstico al proveedor de IA: la infraestructura propia no depende de qué modelo se use. Qdrant no almacena el conocimiento — almacena la representación que permite encontrarlo.",
   },
   {
     id: "modelos-ia",
-    title: "Modelos de lenguaje",
+    title: "Modelos de IA",
     tagline: "¿Cómo se transforma el conocimiento?",
     groups: [
       { label: "Hoy", items: ["Generación de quizzes — ya integrada al constructor"] },
@@ -411,55 +382,16 @@ export const REQUIREMENTS: RequirementArea[] = [
     note: "El modelo es intercambiable; el conocimiento y la lógica del Engine permanecen.",
   },
   {
-    id: "integraciones",
-    title: "Integraciones",
-    tagline: "¿Quién consume el Engine?",
-    groups: [
-      {
-        items: [
-          "Moodle",
-          "Constructor",
-          "APIs institucionales",
-          "Servicios internos",
-          "Futuras aplicaciones académicas",
-          "Asistentes o herramientas de consulta",
-        ],
-      },
-    ],
-    note: "El Engine no es otro sistema que abrir — es una capa que otros sistemas consumen.",
-  },
-  {
     id: "gobernanza",
-    title: "Seguridad y gobernanza",
-    tagline: "¿Quién controla el conocimiento?",
+    title: "Gobernanza y responsabilidad",
+    tagline: "¿Quién controla el conocimiento y quién responde por él?",
     groups: [
       {
         label: "Gobierno del conocimiento",
         items: [
-          "Quién puede incorporar conocimiento",
-          "Quién puede validarlo",
-          "Quién puede modificarlo",
-          "Quién puede consultarlo",
-          "Trazabilidad de cambios",
-          "Versionado",
+          "Quién puede incorporar, validar, modificar y consultar conocimiento",
+          "Trazabilidad de cambios y versionado",
           "Fuentes autorizadas",
-        ],
-      },
-    ],
-  },
-  {
-    id: "equipo",
-    title: "Equipo humano",
-    tagline: "¿Quién mantiene y valida todo esto?",
-    groups: [
-      {
-        label: "Roles",
-        items: [
-          "Curaduría académica — valida el conocimiento",
-          "Ingeniería — desarrolla y mantiene el Engine",
-          "Infraestructura — monitoreo, disponibilidad y respaldos",
-          "Soporte — atiende a los consumidores del Engine",
-          "Gobernanza — define quién puede incorporar o modificar conocimiento",
         ],
       },
     ],
