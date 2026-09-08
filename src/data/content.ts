@@ -137,12 +137,10 @@ export const BENEFITS: BenefitGroup[] = [
 ];
 
 export const ROADMAP: RoadmapPhase[] = [
-  { number: "01", title: "Digitalización institucional", description: "Levantamiento y catalogación del conocimiento existente." },
-  { number: "02", title: "Knowledge Repository", description: "Repositorio gobernado, versionado y consultable." },
-  { number: "03", title: "Chatbot institucional", description: "Primer consumidor conversacional en producción." },
-  { number: "04", title: "Simuladores", description: "Casos con consistencia factual estricta." },
-  { number: "05", title: "Knowledge Connectors", description: "Fuentes externas bajo la misma gobernanza." },
-  { number: "06", title: "Aprendizaje incremental", description: "El motor detecta y cierra sus propios vacíos." },
+  { number: "01", title: "Generación de cursos completos con IA", description: "El motor no solo arma actividades sueltas: construye cursos completos, desde cero, con información verificada de la institución." },
+  { number: "02", title: "Chatbot institucional", description: "Resuelve dudas de estudiantes y docentes con respaldo documental verificable — ya construido y en producción." },
+  { number: "03", title: "Simuladores educativos", description: "Casos de práctica realistas — un alumno de Derecho ante un juez de IA, un alumno de Medicina con un paciente simulado — con total consistencia factual." },
+  { number: "04", title: "Fuentes externas conectadas", description: "El motor no solo aprende de UVEG: incorpora fuentes académicas externas confiables cuando el conocimiento interno no es suficiente." },
 ];
 
 export const FUTURE_NODES: FutureNode[] = [
@@ -362,10 +360,6 @@ export const REQUIREMENTS: RequirementArea[] = [
           "Documentos originales, PDFs, paquetes SCORM, versionado y respaldos",
         ],
       },
-      {
-        label: "Proveedor de IA (inferencia externa)",
-        items: ["Generación de recursos mediante modelos de lenguaje"],
-      },
     ],
     note: "El Engine es agnóstico al proveedor de IA: la infraestructura propia no depende de qué modelo se use. Qdrant no almacena el conocimiento — almacena la representación que permite encontrarlo.",
   },
@@ -385,11 +379,11 @@ export const REQUIREMENTS: RequirementArea[] = [
   },
   {
     id: "gobernanza",
-    title: "Gobernanza y responsabilidad",
-    tagline: "¿Quién controla el conocimiento y quién responde por él?",
+    title: "Roles y responsabilidad humana",
+    tagline: "¿Quién audita, valida y autoriza cada pieza de conocimiento?",
     groups: [
       {
-        label: "Gobierno del conocimiento",
+        label: "Personal a cargo",
         items: [
           "Quién puede incorporar, validar, modificar y consultar conocimiento",
           "Trazabilidad de cambios y versionado",
@@ -404,8 +398,8 @@ export const REQUIREMENTS: RequirementArea[] = [
     title: "Presupuesto",
     tagline: "¿Cuánto cuesta operar cada capa?",
     groups: [
-      { label: "Infraestructura", items: ["Cómputo", "Base vectorial", "Almacenamiento", "Red y operación"] },
-      { label: "IA", items: ["Embeddings", "Inferencia", "Tokens de entrada/salida"] },
+      { label: "Infraestructura", items: ["Cómputo", "Almacenamiento", "Red y operación"] },
+      { label: "IA", items: ["Tokens de entrada/salida", "Consumo de modelos generativos"] },
       { label: "Operación", items: ["Monitoreo", "Respaldos", "Mantenimiento", "Soporte"] },
     ],
     note: "Costo variable principalmente por volumen de conocimiento, consultas concurrentes y consumo de modelos.",
