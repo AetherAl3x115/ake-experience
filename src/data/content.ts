@@ -7,7 +7,7 @@ import type {
   FutureNode,
   TimelineMilestone,
   EcosystemNode,
-  ConsumerInfo,
+ ConsumerInfo,
   Institution,
   RequirementArea,
   ExecutionPhase,
@@ -100,7 +100,7 @@ export const BRIDGE_FLOW: FlowStep[] = [
 export const BENEFITS: BenefitGroup[] = [
   {
     eyebrow: "01",
-    title: "Equipo institucional",
+   title: "Equipo institucional",
     items: [
       "Menos horas construyendo desde cero",
       "Contenido fundamentado, no improvisado",
@@ -141,6 +141,8 @@ export const ROADMAP: RoadmapPhase[] = [
   { number: "02", title: "Knowledge Repository", description: "Repositorio gobernado, versionado y consultable." },
   { number: "03", title: "Chatbot institucional", description: "Primer consumidor conversacional en producción." },
   { number: "04", title: "Simuladores", description: "Casos con consistencia factual estricta." },
+  { number: "05", title: "Knowledge Connectors", description: "Fuentes externas bajo la misma gobernanza." },
+  { number: "06", title: "Aprendizaje incremental", description: "El motor detecta y cierra sus propios vacíos." },
 ];
 
 export const FUTURE_NODES: FutureNode[] = [
@@ -284,7 +286,7 @@ export const INSTITUTIONS: Institution[] = [
     category: "IA con contexto propio",
     description: "Claude integra herramientas y contexto extendido para razonar sobre el conocimiento específico de cada organización, no solo su entrenamiento general.",
   },
-
+  
 ];
 
 export const EXECUTION_PHASES: ExecutionPhase[] = [
