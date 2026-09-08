@@ -141,6 +141,8 @@ export const ROADMAP: RoadmapPhase[] = [
   { number: "02", title: "Chatbot institucional", description: "Resuelve dudas de estudiantes y docentes con respaldo documental verificable — ya construido y en producción." },
   { number: "03", title: "Simuladores educativos", description: "Casos de práctica realistas — un alumno de Derecho ante un juez de IA, un alumno de Medicina con un paciente simulado — con total consistencia factual." },
   { number: "04", title: "Fuentes externas conectadas", description: "El motor no solo aprende de UVEG: incorpora fuentes académicas externas confiables cuando el conocimiento interno no es suficiente." },
+  { number: "05", title: "Tutor académico personalizado", description: "Un tutor de IA que acompaña al alumno a resolver dudas de su curso, con respuestas siempre ancladas al material real de la materia." },
+  { number: "06", title: "Bancos de evaluación completos", description: "El motor genera bancos de reactivos completos y confiables para cada examen, sin que el docente redacte cada pregunta desde cero." },
 ];
 
 export const FUTURE_NODES: FutureNode[] = [
