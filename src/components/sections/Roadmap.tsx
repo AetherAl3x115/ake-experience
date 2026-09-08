@@ -12,7 +12,7 @@ export function Roadmap() {
       <SectionHeading
         eyebrow="Roadmap"
         align="center"
-        title="Diez posibilidades, una sola infraestructura"
+        title="El mismo motor, más posibilidades"
         description="El roadmap no entrega funcionalidades sueltas: construye, fase por fase, una plataforma de conocimiento institucional."
       />
 
