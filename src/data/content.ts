@@ -63,7 +63,7 @@ export const ENGINE_LAYERS = [
   },
   {
     id: "rag",
-    title: "Recuperación aumentada",
+    title: "RAG · Recuperación aumentada",
     body: "El conocimiento verificado se recupera antes de generar cualquier respuesta: primero la fuente, después la composición.",
   },
   {
